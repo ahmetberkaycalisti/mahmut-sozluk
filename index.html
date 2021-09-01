@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksi Clone Clone</title>
+    <link rel="stylesheet" href="helpers.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap">
+    
+    <script defer src='index.js'></script>
+</head>
+<body class="dark has-entries" id="ua">
+    <header class="page_header">
+
+        <div class="container">
+            <div class="small-device-alert">cihaz cok kucuk!</div>
+            <div class="top-bar">
+                <button class="content-skipper d-print-none">Ana icerige gec</button>
+                <div class="logo">
+                    <a href=""></a>
+                </div>
+                <form class="header-search-form" id="header_search_form">
+                    <div class="input-group searchbox">
+                        <input type="text" placeholder="baslik #entry ya da @yazar" class="searchbox-text form-control" id="header_search">
+                        <div class="input-group-append">
+                            <button type="button" class="btn dropbtn dropdown-toggle dropdown-toggle-split">
+                                <span class="sr-only">Gelismis arama menusunu ac</span>
+                            </button>
+                            <button class="btn searchbtn" type="submit" title="Ara">
+                                
+                            </button>
+                            <div class="dropdown-menu no-collapse no-arrows dropdown-advanced-search p-0">
+                                <div class="px-3 py-2">
+                                    <div class="form-group">
+                                        <label for="keywords_dropdown">kelimeler</label>
+                                        <input type="text" class="form-control author-search" id="author_nick_dropdown">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="nice_ones_dropdown">
+                                        <label for="" class="custom-control-label">guzelinden olsun</label>
+                                    </div>
+                                </div>
+                                <div class="search-dates d-grid grid-col-2 grid-gap-1">
+                                    <div class="form-group">
+                                        <label for="date_from-dropdown">su tarihten:</label>
+                                        <input type="date" class="form-control" id="date_from_dropdown" placeholder="yyyy-aa-gg">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="date_from-dropdown">bu tarihe kadar:</label>
+                                        <input type="date" class="form-control" id="date_from_dropdown" placeholder="yyyy-aa-gg">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ordering_dropdown">siralama sekli</label>
+                                    <select form="search_form_extended_dropdown" name="ordering" id="ordering_dropdown">
+                                        <option value="alpha">alfabetik</option>
+                                        <option value="newer" selected>yeniden eskiyee</option>
+                                        <option value="popular">dolu dolu</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-django stretch" id="perform_advanced_search">cok guzel ara</button>
+                                </div>
+                                <a href="" class="dropdown-item text-center dropdown-close" id="close_search_dropdown">bosver</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                </form>
+                <nav class="usermenu">
+                    <ul class="m-0 py-1 px-0">
+                        <li><a href="">giris yap</a></li>
+                        <li><a href="">kayit ol</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="sub-nav">
+                <ul class="mobile-only">
+                    <li class="active">
+                        <a title="neler olup bitiyor" href="">gündem</a>
+                    </li>
+                    <li >
+                        <a title="en beğenilen entry&#x27;ler" href="">en&#x27;ler</a>
+                    </li>                
+                    <li>
+                        <a title="geçen yıllarda bu zamanlar ne denmiş?" href="">tarihte bugün</a>
+                    </li>
+                    <li>
+                        <a href="">giriş yap</a>
+                    </li>
+                    <li>
+                        <a href="">kayıt ol</a>
+                    </li>
+                </ul>
+                <ul class="desktop-only">
+                    <li class="active">
+                        <a title="neler olup bitiyor" href="">gündem</a>
+                    </li>
+                    <li>
+                        <a title="en beğenilen entry&#x27;ler" href="">en&#x27;ler</a>
+                    </li>   
+                    <li>
+                        <a title="geçen yıllarda bu zamanlar ne denmiş?" href="">tarihte bugün</a>
+                    </li>
+                    <li >
+                        <a href="" title="politika yapma işi, toplum yönetme bilimi">#siyaset</a>
+                    </li>
+    
+                    <li>
+                        <a href="" title="yoklama, kişisel görüşler, karşılaştırmalar">#anket</a>
+                    </li>
+                    <li>
+                        <a href="" title="bilgisayara talimat verme eylemi">#programlama</a>
+                    </li>
+                    <li>
+                        <a href="" title="sözlüğün kendisi hakkında">#meta</a>
+                    </li>
+                    <li class="key-clickable" id="category-expand" data-toggle="dropdown" tabindex="0" aria-haspopup="true" aria-label="Diğer Kanallar">
+                    </li>
+                    <div class="more_tags_dropdown dropdown-menu">
+                        <a title="doğruyu bulmaya yönelik metodolojik bir anlayış" class="dropdown-item" href="">#bilim</a>
+                        <a title="türkiye&#x27;de &quot;futbol&quot; olarak da bilinir" class="dropdown-item" href="">#spor</a>
+                        <div class="dropdown-divider"></div>
+                        <a title="kanalsız başlıklar" class="dropdown-item" href="">başıboşlar</a>
+                        <a href="" class="dropdown-item regular">tüm kanallar</a>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- Ends Of Page Header -->
+
+</body>
+</html>
